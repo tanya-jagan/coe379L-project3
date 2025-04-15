@@ -1,11 +1,13 @@
-# coe379L-project3
+### coe379L-project3
 
 The API has two endpoints: /summary for information about the API and /inference for taking in an image file and returning the prediction (“damage” or “no damage”).
 For deploying using Docker, first clone the repository. Next, build and start the container using “docker-compose up –build.” The API should be available at http://localhost:5000. To stop the container, run “docker-compose down.”
 
-Example requests: 
-/summary: uses GET and returns the API version, name, description, and number of parameters for the model 
+###Example requests: 
+
+##/summary: uses GET and returns the API version, name, description, and number of parameters for the model 
 curl request: curl http://localhost:5000/summary
+
 json response: 
 {
   "version": "v1",
@@ -13,7 +15,8 @@ json response:
   "description": " ----- Categorize damage from hurricanes ------",
   "number_of_parameters": 1234567
 }
-/inference: uses POST to accept an image file as input and return the prediction (“damage” or “no damage”)
+
+##/inference: uses POST to accept an image file as input and return the prediction (“damage” or “no damage”)
 curl request: curl -X POST http://localhost:5000/inference \
      -F "image=@path_to_your_image.jpg"
 json response with success: 
