@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    image: tanyajagan/damage-api   # Your image from Docker Hub
+    container_name: app-container
+    ports:
+      - "5000:5000"   # Expose port 5000 (or whatever is required)
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - .:/app   # Mount the current directory to /app in the container
+
