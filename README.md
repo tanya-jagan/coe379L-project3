@@ -1,4 +1,4 @@
-### coe379L-project3
+### coe379L-project3 - easier to read in Code format
 
 The API has two endpoints: /summary for information about the API and /inference for taking in an image file and returning the prediction (“damage” or “no damage”).
 For deploying using Docker, first clone the repository. Next, build and start the container using “docker-compose up –build.” The API should be available at http://localhost:5000. To stop the container, run “docker-compose down.”
